@@ -38,14 +38,21 @@ function [x,y]=cs2cs(u, v, prj4_params)
   if ~isempty(u)
     % cs2cs: operating system dependent stuff
     %----------------------------------------------------------------------
-    os = computer();
-    if strcmp(os(1:5),'PCWIN')
+    if ispc() % MS windows
       f = filesep();
       proj_path = [pwd() f 'util' f 'proj' f 'bin'];
       proj_lib_path = [pwd() f 'util' f 'proj' f 'nad'];
       clear f;
       setenv('PATH', [getenv('PATH') ';' proj_path]);
       setenv('PROJ_LIB', proj_lib_path);
+    else
+      if isunix() || ismac()
+        if unix('which cs2cs')
+          error('binary of cs2cs not found in path');
+        end
+      else % unknown OS
+        error('operating system not supported');
+      end
     end
 
     % call cs2cs
