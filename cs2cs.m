@@ -1,4 +1,23 @@
 function [x,y]=cs2cs(u, v, prj4_params)
+%CS2CS - cartographic coordinate system filter
+%  This is a wrapper-function for cs2cs.
+%
+% Syntax:  [x,y] = cs2cs(u, v, prj4_params)
+% 
+% Inputs: 
+%    u - vector with horizontal input coordinates
+%    v - vector with vertical input coordinates
+%    prj4_params - parameters of cs2cs
+% 
+% Outputs:
+%    x - vector with horicontal output coordinates
+%    y - vector with vertical output coordinates
+%
+
+% Author: Erwin Nindl
+% Email: nine-cs2cs-2013@wirdorange.org
+% Website: https://github.com/nine/matlab-cs2cs
+% April 2013; Last revision: 12-May-2004
 
   % call cs2cs from matlab
   % inspired by
