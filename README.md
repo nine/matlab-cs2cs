@@ -1,7 +1,8 @@
 cs2cs for Matlab
 ================
 
-This is a wrapper-function to call cs2cs from 
+This is a wrapper-function to call 
+[cs2cs](http://proj.maptools.org/man_cs2cs.html) from 
 [GNU Octave](https://www.gnu.org/software/octave/) or 
 [Mathworks Matlab](http://www.mathworks.com/products/matlab/).
 
