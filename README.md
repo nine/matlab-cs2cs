@@ -15,10 +15,21 @@ transformation can include translation between projected and geographic
 coordinates as well as the application of datum shifts.
 
 
+Example Usage
+-------------
+<pre>
+prj4_params = ['-f  "%.12f" +proj=tmerc +lat_0=0 +lon_0=34 +k=1 +x_0=0 +y_0=0 +ellps=bessel ' ...
+               '+towgs84=577.326,90.129,463.919,5.137,1.474,5.297,2.4232 +units=m +no_defs'];
+x = [-1300043.7691, -1300143.76919];
+y = [5484682.0535, 5484382.0535];
+[lon, lat] = cs2cs(x, y, prj4_params);
+</pre>
+
+
 Background
 ----------
-Arguments are passed to the binary using temporary files. This may be slow 
-for too many calls. 
+Arguments are passed to the binary of cs2cs using temporary files. This may be 
+slow for too many function calls. 
 
 
 Dependencies
