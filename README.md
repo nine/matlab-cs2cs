@@ -35,7 +35,7 @@ The binaries of cs2cs are shipped with this release.
 
 License
 -------
-Copyright (c) 2013, Erwin Nindl
+Copyright (c) 2013, Erwin Nindl<br/>
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
