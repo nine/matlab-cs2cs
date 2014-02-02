@@ -40,8 +40,10 @@ function [x,y]=cs2cs(u, v, prj4_params)
     %----------------------------------------------------------------------
     if ispc() % MS windows
       f = filesep();
-      proj_path = [pwd() f 'util' f 'proj' f 'bin'];
-      proj_lib_path = [pwd() f 'util' f 'proj' f 'nad'];
+      [pathstr,~,~] =  fileparts(mfilename('fullpath'));
+      proj_path     = [pathstr f 'util' f 'proj' f 'bin'];
+      proj_lib_path = [pathstr f 'util' f 'proj' f 'nad'];
+      clear pathstr;
       clear f;
       setenv('PATH', [getenv('PATH') ';' proj_path]);
       setenv('PROJ_LIB', proj_lib_path);
